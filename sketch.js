@@ -53,12 +53,10 @@ function draw() {
 		helicopterSprite.x -= 5;
 	}
 
-	if(packageBody.position.y < 250){
-		packageBody.position.x = helicopterSprite.x;
-	}
+	packageBody.position.x = helicopterSprite.x;
 
 	if(keyWentDown("down")){
-		Matter.Body.velocity.X(packageBody, 10);
+		Matter.Body.setStatic(packageBody, false);
 	}
 
   	packageSprite.x = packageBody.position.x;
