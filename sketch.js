@@ -58,13 +58,11 @@ function draw() {
 	}
 
 	if(keyWentDown("down")){
-		Matter.Body.setStatic(packageBody, false);
+		Matter.Body.velocity.X(packageBody, 10);
 	}
 
   	packageSprite.x = packageBody.position.x;
 	packageSprite.y = packageBody.position.y;
-
-	packageBody.velocity.X = 0;
 
 	boxBottom.display();
 	boxLeft.display();
